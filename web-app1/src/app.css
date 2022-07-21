@@ -1,0 +1,36 @@
+
+/* Write your global styles here, in PostCSS syntax */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+	@apply dark:bg-nrdark dark:text-nraccent;
+}
+.app-centered {
+	@apply min-h-screen flex justify-center items-center flex-col;
+}
+.sidebar {
+	@apply top-0 left-0 fixed bg-white dark:bg-nrdark dark:shadow-2xl 
+	text-gray-500 dark:text-nraccent font-bold min-h-full w-full lg:w-72 
+	ease-in-out duration-300 z-50
+	lg:translate-x-0 shadow-lg;
+}
+.sidebar-nav {
+	@apply text-xl py-3 px-4 hover:bg-orange-500 hover:text-white;
+}
+
+.btn-primary {
+	@apply bg-green-500 text-green-100 hover:bg-green-700;
+}
+
+.btn-accent {
+	@apply bg-yellow-500 text-yellow-900;
+}
+
+.btn-neutral {
+	@apply bg-gray-200 text-gray-900;
+}
+.btn-neutral:hover {
+	@apply bg-gray-900 text-gray-200;
+}
+

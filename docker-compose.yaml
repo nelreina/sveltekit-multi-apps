@@ -1,0 +1,20 @@
+version: '3.9'
+services:
+  web-app1:
+    build: ./web-app1
+
+  web-app2:
+    build: ./web-app2
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - "3000:80"
+    depends_on:
+      - web-app1
+      - web-app2
+    volumes:
+      - ./conf.d:/etc/nginx/conf.d
+networks:
+  default:
+    name: local
